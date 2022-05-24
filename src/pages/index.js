@@ -16,7 +16,7 @@ function IndexPage({ articles }) {
 
 
 IndexPage.getInitialProps = async () => {
-  const res = await fetch('https://newsapi.org/v2/top-headlines?country=us&apiKey=${API_KEY}');
+  const res = await fetch(`https://newsapi.org/v2/top-headlines?country=us&apiKey=${API_KEY}`);
   const data = await res.json();
   return {
     articles: data.articles,
